@@ -1,0 +1,19 @@
+Chall Name: Save the City
+Chall Description: The RAW Has Got An Input That ISIS Has Planted a Bomb Somewhere In The Pune! Fortunetly, RAW Has Infiltratrated The Internet Activity of One 
+		   Suspect And They Found This Link. You Have To Find The Location ASAP!
+
+
+Given: A server instance.
+
+Solution:
+For this chall, you try connecting to the given server using netcat and you find out the ssh version to be "ssh-2.0-libssh_0.8.1". Google around for CVEs for this
+version of ssh. You will find one "cve-2018-10993" which is for this version of ssh. You can download the exploit using this link:
+https://gist.githubusercontent.com/mgeeky/a7271536b1d815acfb8060fd8b65bd5d/raw/d4425b8504d25cf364185257eff04c6a8cc9a06e/cve-2018-10993.py 
+
+Script also attached along with writeup. Next you can use the following command to exploit the server. 
+(python3 exploit.py -v -p <server_port> -c "cat location.txt" <server_ip>)
+
+and you get the location which is the flag.
+
+
+Flag: VishwaCTF{elrow-club-pune}
