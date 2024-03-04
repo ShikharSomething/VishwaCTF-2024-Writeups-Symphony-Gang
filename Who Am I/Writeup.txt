@@ -1,0 +1,11 @@
+Chall name: Who am I?
+Chall Description: Find me on the discord to get your flag
+
+Given: https://discord.com/invite/KjsqfMwJKR
+
+Solution:
+Join the discord server given. Search for the author "Aditya Gaikwad" on the discord server, through the search bar given on top. Username is 101_shadow.
+See the about me of the Author and you get the flag. (More description in image_1)
+
+Flag:
+VishwaCTF{1_4m_n0t_4n0nym0u5_4nym0r3}
