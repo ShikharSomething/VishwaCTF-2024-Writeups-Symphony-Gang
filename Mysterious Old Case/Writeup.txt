@@ -1,0 +1,18 @@
+Chall Name: Mysterious Old Case
+Chall Description: You as a FBI Agent, are working on a old case involving a ransom of $200,000. After some digging you recovered an audio recording.
+
+
+Given: final.mp3
+
+Solution:
+So on the first time listening to the audio, I knew that the audio was reversed, so I reversed the audio and got the original one and Got some hints on what the 
+scenario is. One hint was about fibonacci pattern from 2 (idk how that was of any use). Further on i opened the mp3 file in notepad and found some data like the
+password is all lowercase, and a google drive link (image_1.png). And then i go on with downloading the zip file from the google drive and find that the zip file
+is password protected. I tried john but no results and then remembered that the password was all lowercase no spaces. I tried DB cooper and stuff of those sorts and
+finally got the password which was "northwestorientairlines". and then after opening the zip file i find that one text document amongst all other files (image_2.png)
+and see that it contains the flag with alot of random logs (image_3.png). So i just manually make out the flag there could've been a way of making a python script or
+something but i was very very lazy to think that way.
+
+
+Flag:
+VishwaCTF{1_W!LL_3E_B@CK}
