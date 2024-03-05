@@ -1,0 +1,13 @@
+Chall Name: We are Valorant
+Chall Description: One day, while playing Valorant, I received a mail from Riot Games that read,
+
+		   “In a world full of light, sometimes the shadows help you win.” “Your Signature move also helps you a lot ; develop one and ace it now.”
+
+		   It also had an image and a video/gif attached to it. I am not able to understand what they want to say. Help me find what the message wants to express.
+
+
+Given: Astra_!!.mp4, we_are_valorant.jpg
+
+Solution:
+You fix the jpg image (the headers for more context). And then there's nothing too special in the image. You can then upload the 
+image to "https://www.aperisolve.com/" and there it would check the image for 

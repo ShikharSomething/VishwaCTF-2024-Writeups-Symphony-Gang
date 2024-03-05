@@ -1,0 +1,14 @@
+Chall Name: BitBane - Cryptic Chaos
+Chall Description: Once again, Mr. David made a blunder by encrypting some confidential data and deleting the original file. Can you help him retrieve the data from 
+		   the encrypted file?
+
+
+Given: Encrypt.cpp, Encrypted.txt
+
+Solution:
+So after analyzing the source code, we get to know that it's a symmetric encryption so we can bruteforce each letter at a time and knowing the flag format
+VishwaCTF{ makes it clearer. You can refer to the decrypt.py script to see the bruteforce process. (Sorry if this writeup is very small, it's like 12am and i'm
+writing this i want to go to sleep sorry.)
+
+Flag:
+VishwaCTF{BIT5_3NCRYPT3D_D3CRYPTED_M1ND5_D33PLY_TE5T3D}

@@ -1,0 +1,14 @@
+Chall Name: Happy Valentine's Day
+Chall Description: My girlfriend and I captured our best moments of Valentine's Day in a portable graphics network. But unfortunately I am not able to open it as I 
+		   accidentally ended up encrypting it. Can you help me get my memories back
+
+Given: source.txt, enc.txt
+
+Solution:
+Seeing the enc.txt file makes it clear that it's a png with a .txt extension. I tried changing the extension to .png but didn't work. Then I checked out the source.txt
+file and it's some python code for xoring a png file. The key for the xor is the first 8 bytes of the png file, which is constant for all pngs so i coded the script
+(decrypt.py) for decryption and got the flag
+
+
+Flag:
+VishwaCTF{h3ad3r5_f0r_w1nn3r5}

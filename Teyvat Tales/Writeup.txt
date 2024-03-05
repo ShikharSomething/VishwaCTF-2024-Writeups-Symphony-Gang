@@ -1,0 +1,18 @@
+Chall Name: Teyvat Tales
+Chall Description: All tavern owners in Mondstadt are really worried because of the frequent thefts in the Dawn Winery cellars. The Adventurers’ Guild has decided 
+		   to secure the cellar door passwords using a special cipher device. But the cipher device itself requires various specifications….which the guild 
+		   decided to find out by touring the entire Teyvat.
+		   PS: The Guild started from the sands of Deshret then travelled through the forests of Sumeru and finally to the cherry blossoms of Inazuma
+
+Given: A web instance
+
+Solution:
+After starting up the website you see some symbol ciphers. After using the inspect tab, you can see the source code (script.js) of the website and the deciphered
+text for the images is already given in the source code (image_1.png). After entering in those values, you get a new ciphertext (image_2.png). After trying and 
+trying for a while I noticed something strange. The deciphered texts made up some pattern which is required for the engima machine decryptor. So i made a note of 
+the ciphertext and all the deciphered text i got from the source code and entered those values in the engima machine decryptor (image_3.png) and after cleaning up
+the output a bit i get the flag!
+
+
+Flag:
+VishwaCTF{beware_of_tone-deaf_bard}

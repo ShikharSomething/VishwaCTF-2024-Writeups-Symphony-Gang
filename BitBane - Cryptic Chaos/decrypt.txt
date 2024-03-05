@@ -1,0 +1,91 @@
+import os
+import subprocess
+import pwn
+global_variable = ["VishwaCTF{BIT5_3NCRYPT3D_D3CRYPTED_M1ND5_D33PLY_TE5T3D}"]
+
+def set_global_value(value):
+    global global_variable
+    global_variable = value
+
+def print_global_value():
+    print("glob: ", global_variable)
+
+def w2(test_flag_path, char):
+    lf = global_variable
+    lf.append(char)
+    value = ""
+
+    with open(test_flag_path, 'w') as file:
+        for i in range(len(lf)):
+            file.write(str(lf[i]))
+            value += str(lf[i])
+
+    return value    
+''' r
+def write_on_the_test_file(test_flag_path,flag_path,char):
+
+    with open(flag_path, 'r') as flag:
+        lf = [(num) for num in flag.read().split()]
+        print(lf)
+        with open(test_flag_path, 'w') as test_flag:
+            test_flag.write(lf[0])
+            value=lf[0]
+        return value
+'''
+def run_program():
+    flag_path = os.path.join("./", 'flag.txt')
+    test_flag_path = os.path.join("./", 'testflags.txt')
+    with open(flag_path, 'r') as flag, open(test_flag_path, 'w') as test_flag:
+
+        read_flag = flag.read() 
+        test_flag.write(read_flag)
+
+    enc_path = os.path.join("./", 'enc.txt')
+    org_path = os.path.join("./", 'Encrypted.txt')
+
+    return enc_path, org_path, read_flag, test_flag_path,flag_path
+
+def check_flag(enc_path, org_path, value, test_flag_path):
+    with open(enc_path, 'r') as enc, open(org_path, 'r') as org:
+        lorg = [int(num) for num in org.read().split()]
+        lenc = [int(num) for num in enc.read().split()]
+
+        count = 0
+        try:
+            for i in range(len(value)):
+
+                if lenc[i] == lorg[i]:
+                    print(value[i],end='')
+                    count += 1
+                else:
+                    print("no")
+                    return 0 
+        except:
+            pass
+        if count == len(value):
+                print(value)
+                set_global_value(value)
+                print("all is match")
+                return 1 
+
+def main():
+    litter = "0123456789ABCDGHIJKLMPQNRSTUFEVWXZYaOobcdefghijklmnpqrstuvwxyz_+^%?!*;,'&_< >@#$=[]{}|:./"
+
+    enc_path, org_path, read_flag, test_flag_path,flag_path = run_program()
+    #value=write_on_the_test_file(test_flag_path,flag_path,litter[guess])
+    for char in range(44):
+        print_global_value()
+        for guess in range(len(litter)):
+            value=w2(test_flag_path,litter[guess])
+            print("value= ",value)
+            p=pwn.process(["./encode"])
+            t=check_flag(enc_path, org_path, value, test_flag_path)
+            if(t==1):
+                break
+            else:
+                set_global_value(["VishwaCTF{BIT5_3NCRYPT3D_D3CRYPTED_M1ND5_D33PLY_TE5T3D"])
+                continue
+
+
+if __name__ == "__main__":
+    main()
