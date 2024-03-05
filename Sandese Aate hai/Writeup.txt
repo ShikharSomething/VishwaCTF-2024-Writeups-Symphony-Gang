@@ -1,0 +1,17 @@
+Challenge Name : Sandese Aate hai
+Chall Description : A friend pranked me by encrypting my letter but gave me the program by which he encrypted it. Can you help me decrypt it?
+                      Replace one of the s with w at the end after receiving the letter
+
+Given :File Program and file encletter.txt( no need to use )
+
+Solution :
+
+Run file Program can help get the Original matrix :
+
+image_1.png
+
+My idea is to decode this matrix clockwise, and accordingly get the code I'm looking for :
+
+image_2.png
+
+* Flag : `VishwaCTF{4nd23y_4nd23y3v1ch_m42k0v}`
