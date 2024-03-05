@@ -1,0 +1,20 @@
+Chall Name: Lets smother the king
+Chall Description: In my friend circle, Mr. Olmstead and Mr. Ben always communicate with each other through a secret code language that they created, which we never 
+		   understand. Here is one of the messages Mr. Ben sent to Mr. Olmstead, which I somehow managed to hack and extract it from Ben's PC. However, it's 
+		   encrypted, and I don't comprehend their programming language. Besides being proficient programmers, they are also professional chess players. It 
+		   appears that this is a forced mate in a 4-move chess puzzle, but the information needs to be decrypted to solve it. Help me out here to solve the 
+		   chess puzzle and get the flag.
+		   Flag format: VishwaCTF{move1ofWhite_move1ofBlack_move2ofWhite_move2ofBlack_move3ofWhite_move3ofBlack_move4ofWhite}.
+		   Note: Please use proper chess notations while writing any move.
+
+Given: code.txt
+
+Solution:
+Upon analyzing the description we get two names "Ben" and "Olmstead" at first thought i thought that these are chess players and some chess match between these two
+is being discussed over here but no that was not the case. Then i try opening the code.txt file and makes no sense. Then i tried search for ben and olmstead both
+together and i get a esoteric language called "malbolge" which i still have no idea how it works. I found this malbolge interpreter online and put in the contents
+of code.txt file in it and got the result (image_1.png). I setup the chess board accordingly and get the smother mate in 4 which is the flag!
+
+
+Flag:
+VishwaCTF{Nc7+_Kb8_Na6+_Ka8_Qb8+_Rxb8_Nc7#}

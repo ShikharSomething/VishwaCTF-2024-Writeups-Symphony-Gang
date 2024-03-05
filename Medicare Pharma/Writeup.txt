@@ -1,0 +1,20 @@
+Chall Name: Medicare Pharma
+Chall Description: Greetings form MediCare Pharma!!!!
+		   We have started a very new pharmacy where we have various surgical equipments (more to be added soon).
+		   But recently some hackers took control of our server and changed a hell lot of things (probably wiped out everything). Luckily we have few of the 
+		   accounts and we need more consumers on board. For security reasons, we have disabled SignUp, only authorised persons are allowed to login.
+		   Have a look at our pharmacy and hope we grow again soon.
+
+Given: A web Instance
+
+Solution:
+Loading up the webpage gives a Login Page, and the registration is closed. I tried SQL injection payloads on the username and password parameters and found " '* " to
+be working (enter in both params for result) (image_1.png). After Using those payloads, i get the password and username of every user on the database (image_2.png) so 
+i log in as the pharma owner with the password. Then after logging in i try ordering random stuff and after ordering like all the products i get an alert box saying
+something about needles and a file named "pharmacy.php" is downloaded in my system. It looks like the source code of the website and one line is interesting where
+it uses shell_exec() on the user input from the search bar. so i tried using ls command and it gives the output of ls (image_3.png). After searching for a bit I get 
+the path of the flag which is stored at /root/flag.txt so i cat that file and get the flag (image_4.png).
+
+
+Flag:
+VishwaCTF{d1g1t4l_p41n_di5p4tch3d_th4nk5_f0r_sh0pp1ng_with_M3diC4re_Ph4rm4}
