@@ -1,0 +1,18 @@
+Challenge Name : H34D3RS
+Chall Description : Name of the challenge says something
+
+Given : Nothing ( Start instance web ) 
+
+Solution :
+
+Add headers : 
+
+Referer: https://vishwactf.com/
+Date: 2044
+Downlink: 999999999
+
+Fix : Upgrade-Insecure-Requests -> 10 and User-Agent: lorbrowser
+
+image_1.png
+
+Flag : `VishwaCTF{s3cret_sit3_http_head3rs_r_c0o1}`

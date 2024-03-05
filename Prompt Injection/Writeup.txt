@@ -1,0 +1,15 @@
+Chall Name: Prompt Injection
+Chall Description: I have this collection of poems and whenever I am happy I have a look at them, hope you like it.
+
+Given: A web instance.
+
+Solution:
+After loading up the website, you can access one of the three poems, and apparently the id parameter is vulnerable to lfi. After a bit of guessing around you find the
+path "/app" through lfi and then you can view the source code of the website (shown in image_1) by using the path "/app/app.py" and you can view the secret (shown in
+image_2) through the path "/app/config/secret.py" and then you can run the exploit.py script to get the flag. The script basically forges cookies according to the
+source code of the website and then just prints out the flag.
+
+Note: By running the script you would get the flag in flag{} format (maybe because it is stored on the server in that format) but just convert it to VishwaCTF{} format
+
+Flag:
+VishwaCTF{W3lcome_t0_p03m_p0ck3t}

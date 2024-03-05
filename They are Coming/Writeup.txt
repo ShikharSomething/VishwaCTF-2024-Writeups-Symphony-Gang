@@ -1,0 +1,33 @@
+
+Challenge Name : They Are Coming
+Chall Description : Aesthetic Looking army of 128 Robots with AGI Capabilities are coming to destroy our locality!
+
+Given : Nothing ( Start instance web ) 
+
+Solution :
+
+View robots.txt : 
+
+image_1.png
+
+
+Get important information that may be noted:
+
+`L3NlY3JldC1sb2NhdGlvbg==`
+`Decryption key: th1s_1s_n0t_t5e_f1a9`
+
+Decrypted `base64` encode : 
+
+image_2.png
+
+Move to the file from message then check the local store : 
+
+image_3.png
+
+Got : `Gkul0oJKhNZ1E8nxwnMY8Ljn1KNEW9G9l+w243EQt0M4si+fhPQdxoaKkHVTGjmA` ->cipher identify this is AES encryption 128 bit so we need decrypt this , with the key has in the previous step
+
+Using this web for decode : https://encode-decode.com/aes128-encrypt-online/
+
+image_4.png
+
+Flag : `VishwaCTF{g0_Su88m1t_1t_Qu14kl7}`
