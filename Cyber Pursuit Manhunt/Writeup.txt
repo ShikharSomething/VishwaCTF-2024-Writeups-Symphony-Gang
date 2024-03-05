@@ -1,0 +1,27 @@
+Chall Name: Cyber Pursuit Manhunt
+Chall Description: In response to alarming reports, our cybersecurity team is actively pursuing a hacker known by the alias "h3ck3r_h3_bh41", who poses a serious 
+		   threat by extorting innocent individuals for monetary gain. Your mission is to track down this hacker and provide us with the crucial information 
+                   needed to apprehend them.
+		   Retrieve the Hacker's complete full name (first name, middle name, last name), formatted in lowercase and replacing spaces with underscores, along 
+		   with the associated website domain.
+
+Given: Nothing
+
+
+Solution:
+At first instinct, you try to search for "h3ck3r_h3_bh41" on all platforms and come across a twitter profile named as "h3ck3r_h3_bh41" shown in (image_1.png). You see
+a post from that account on twitter which mentions something about "Cookie the baby chick". Now that raises questions. I begin searching all platforms again for 
+"cookie" and i find an instagram account which belongs cookie! shown in (image_2.png). Seeing the list of followers of cookie we find two followers (image_3.png).
+That naruto account seems useless but the simon_j_peter one is interesting. Keeping that account at the back of our minds we continue searching for more clues as
+the task is finding the full name and asscociated website domain. In one of the posts from cookie we find a website url. shown in (image_4.png). We open that url
+and are redirected to a youtube channel which doesn't have any uploads though. The name of the channel is of interest shown in (image_5.png). I begin searching
+all social media platforms again for "husky woof woof" (interesting name btw, kudos to the author for coming up with these, anyways back to the writeup). After
+some searching i find a linkedin account with the username "husky woof woof" shown in image_6.png. After opening that account on linkedin, we find the caption
+(Call me john) shown in image_7.png remember simon_j_peter, yes that j refers to John. So we have the full name, we need the website now. I begin searching the posts
+of husky on linkedin to find something and I come across a link shown in image_8.png. Opening that link redirects to a page which has a photo "stock.jpg" and after
+some exiftooling and reverse image searching (image_9.png and image_10.png) we find the location to be in chandrapur, maharashtra and afte googling for a while i find
+tadoba national park (image_11.png) and voila that is the domain name. So that makes up the flag.
+
+
+Flag:
+VishwaCTF{simon_john_peter_tadobanationalpark.in}

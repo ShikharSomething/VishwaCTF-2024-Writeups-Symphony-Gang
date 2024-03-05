@@ -1,0 +1,17 @@
+Chall Name: Secret Code
+Chall Description: Akshay has a letter for you and need your help
+
+Given: confidential.jpg, letter.txt
+
+
+Solution:
+Reading the letter doesn't give alot of information. Then coming to the jpg file, it's a black jpg but opening it in notepad and scrolling to the bottom shows "PK"
+which is header for a zip file (image_1.png) so that means that there is a zip file. So renaming the extension of the image to .zip (confidential.zip) and opening it
+in winrar and extracting it gives two files, helper.txt and 5ecr3t_c0de.zip Now the 5ecr3t_c0de.zip file is password protected but reading through the helper.txt file
+gives some information. It says that the password is a 6 digit number. I downloaded the seclists bruteforce file for 6 digit passwords and ran it with john
+(image_2.png) and got the password to be "945621", after extracting the zip file with this password I get two files "5ecr3t_c0de.txt" and "info.txt", seeing 
+5ecr3t_c0de.txt file gives the instinct of those being some pixels that i have to plot and the hint mentioning "image" in info.txt confirms it. So i get to work
+with PIL library in python and craft a script to plot those pixels and get the flag. (plot_pixels.py and output_image.png)
+
+Flag:
+VishwaCTF{th15_15_4_5up3r_53cr3t_c0d3_u53_1t_w153ly_4nd_d0nt_5h4re_1t_w1th_4ny0ne}

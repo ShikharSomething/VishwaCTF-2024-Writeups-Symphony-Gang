@@ -1,0 +1,17 @@
+Chall Name: Poly Fun
+Chall Description: Its a simple symmetric key encryption, I am sure you will be able to solve it (what do you mean the key looks weird)
+
+Given: challenge.py (source code), encoded_key.txt, encoded_flag.txt
+
+Solution:
+Going through the source code you find a generate_random_number, generate_random_number_again and a transform function. After playing around for a bit you find that
+transform function doesn't do anything with the number and just returns the number itself (check transform_function_test.py and image_1.png, image_2.png for more
+information). Then this means that we also don't have to focus on those random number functions. Then we see that the key is encoded with a polynomial whose
+coefficients are given in the code as (4,3,7). You can use the decrypt_key.py script to get the key. What the script basically does is get the roots of the polynomial
+wrt to the encrypted key value to get the decrypted key value. The key is shown in image_3.png. Then you see the encoded_flag.txt file and you might notice it that
+the flag is encrypted with aes I had to test out with all the aes to find out which one was actually right (plus the description also mentions "symmetric key
+encryption"). As shown in image_4.png you can head over to that site and use the key and the encrypted text to get the flag in base64 value and then as shown in
+image_5.png you can use that site to decrypt the base64 and get the flag.
+
+Flag:
+VishwaCTF{s33_1_t0ld_y0u_1t_w45_345y}
